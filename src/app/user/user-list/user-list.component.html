@@ -1,8 +1,13 @@
 <div>
+  <div class="heading">
+    <span class = "pagetitle">User List</span>
+    <span class = "create"> | <a routerLink="/user/create">Create</a></span>
+  </div>
 <table class="table table-sm">
   <thead>
   <tr>
     <td>Username</td>
+    <td>First and Last Name</td>
     <td>Email</td>
     <td>Phone</td>
     <td>Review?</td>
@@ -17,10 +22,12 @@
         <td>{{user.email}}</td>
         <td>{{user.phone}}</td>
         <td>{{user.isReviewer?"Yes" : "No"}}</td>
-        <td>{{user.isAdmin}}</td>
-        <td>{{user.Actions}}</td>
-        <a routerLink="/user/detail/{{user.id}}">Detail|||</a>
-        <a routerLink="/user/edit/{{user.id}}">Edit</a>
+        <td>{{user.isAdmin}}</td>  
+        <td>
+            <a routerLink="/user/detail/{{user.id}}">Detail | </a>
+            <a routerLink="/user/edit/{{user.id}}">Edit</a>
+        </td>     
+       
       </tr>
   </tbody>
 
