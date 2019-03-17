@@ -1,3 +1,52 @@
-<p>
-  user-detail works!
-</p>
+<div>
+    <div class="heading">
+            
+           
+      <span class = "pagetitle"> User Detail | </span>
+      <span class = "nextuser"><a routerLink="/user/detail/{{user.id}}+1">Next User |</a></span>
+      <span class = "list"><a routerLink="/user/list">User List</a></span>
+      <span class = "create"> | <a routerLink="/user/create">Create User</a></span>
+    </div>
+
+    <div class = "container">   
+       
+            
+       
+     <table class="table  table-bordered table-striped">            
+            
+             <tbody>
+                    <tr>                     
+                      <th scope="col">Username:</th>
+                      <th scope="col">{{user.username}}</th>                                        
+                    </tr>
+                    <tr>
+                        <th scope="col">Firstname: </th>
+                         <th scope="col">{{user.firstname}}</th>                      
+                    </tr>
+                    <tr>
+                        <th scope="col">Last Name: </th>
+                        <th scope="col">{{user.lastname}}</th>                      
+                    </tr>
+                    <tr>
+                            <th scope="col">Phone:</th>
+                            <th scope="col">{{user.phone}}</th>                      
+                     </tr>
+                     <tr>
+                            <th scope="col">Email: </th>
+                            <th scope="col">{{user.email}}</th>                      
+                     </tr>
+                     <tr>
+                            <th scope="col">Reviewer:</th>
+                            <th scope="col">{{user.isReviewer?"Yes" : "No"}}</th>                         
+                     </tr>
+                     <tr>
+                            <th scope="col">Admin: </th>
+                            <th scope="col">{{user.isAdmin?"Yes" : "No"}}</th>                      
+                     </tr>
+                </tbody>
+    
+ </table>  
+  
+</div>
+ 
+  </div>
