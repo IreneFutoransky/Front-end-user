@@ -10,8 +10,6 @@ export class User {
     isReviewer: boolean;
     isAdmin: boolean;
     Active: boolean;
-
-
     
         constructor(Username: string, Password: string, Firstname: string, Lastname: string, 
             Phone: string, Email: string, isReviewer: boolean = false, isAdmin: boolean = false, 
@@ -24,6 +22,7 @@ export class User {
         this.Phone = Phone;
         this.Email = Email;
         this.isReviewer = isReviewer;
+        this.isAdmin= isAdmin;
         this.Active = Active;
 
     }    

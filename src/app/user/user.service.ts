@@ -19,8 +19,8 @@ export class UserService {
     return this.http.get(`${url}/users/${id}`) as Observable<User>;
   }
 
-  create(user: User): Observable<any>{
-    return this.http.post(`${url}/users`, user) as Observable<any>;
+  create(user: User): Observable<User>{
+    return this.http.post(`${url}/users`, user) as Observable<User>;
   }
 
   change(user: User): Observable<any>{

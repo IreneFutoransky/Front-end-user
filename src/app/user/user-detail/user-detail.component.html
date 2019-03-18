@@ -3,11 +3,11 @@
             
            
       <span class = "pagetitle"> User Detail | </span>
-      <span class = "nextuser"><a routerLink="/user/detail/{{user.id}}+1">Next User |</a></span>
+      <span class = "nextuser"><a routerLink="/user/detail/">Next User |</a></span>
       <span class = "list"><a routerLink="/user/list">User List</a></span>
-      <span class = "create"> | <a routerLink="/user/create">Create User</a></span>
+      <span class = "create"><a routerLink="/user/create"> | Create User</a></span>
     </div>
-
+     
     <div class = "container">   
        
             
@@ -16,9 +16,10 @@
             
              <tbody>
                     <tr>                     
-                      <th scope="col">Username:</th>
-                      <th scope="col">{{user.username}}</th>                                        
-                    </tr>
+                        <th scope="col">Username:</th>
+                         <th scope="col">{{user.username}}</th>                                        
+                     </tr>
+                    
                     <tr>
                         <th scope="col">Firstname: </th>
                          <th scope="col">{{user.firstname}}</th>                      

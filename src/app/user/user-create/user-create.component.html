@@ -1,9 +1,67 @@
 <div>
   <div class="heading">
-    <span class = "pagetitle"> Create New User| </span>
+    <span class = "pagetitle"> Create New User | </span>
     <span class = "list"><a routerLink="/user/list">User List</a></span>
      
   </div>
 </div>
 
- 
+<button (click)="save()">Add User</button>
+<button (click)="display()"> test </button>
+
+    
+<table class="table  table-bordered table-striped">      
+              
+    <tbody>
+              <tr>     
+                            <th scope="col">Id </th>                
+                            <input type="text" ng-model="user.Id">
+                                                                  
+                         </tr>
+
+           <tr>     
+              <th scope="col">Username </th>                
+              <input type="text" ng-model="user.Username">
+                                                    
+           </tr>
+           <tr>
+               <th scope="col">First Name: </th>
+               <input type="text" ng-model="user.Firstname">                   
+           </tr>
+           <tr>
+               <th scope="col">Last Name: </th>
+               <input type="text" ng-model="user.Lastname">                          
+           </tr>
+           <tr>
+                   <th scope="col">Phone:</th>
+                   <input type="text" ng-model="user.Phone">                      
+            </tr>
+            <tr>
+                   <th scope="col">Email: </th>
+                   <input type="text" ng-model="user.Email">                          
+            </tr>
+            <tr>
+                   <th scope="col">Reviewer:</th>
+                   <input type="checkbox" ng-model="user.isReviewer">    
+            <tr>
+                   <th scope="col">Admin: </th>
+                   <input type="checkbox" ng-model="user.isAdmin">                  
+            </tr>
+            <tr>
+                     <th scope="col">Active: </th>
+                     <input type="checkbox" ng-model="user.Active">                  
+              </tr>
+            <tr>
+                <th scope="col">Password: </th>
+                <input type="password" ng-model="user.Password">                  
+         </tr>
+       </tbody>
+
+</table>  
+
+
+
+
+
+  
+  

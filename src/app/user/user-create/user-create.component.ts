@@ -13,15 +13,18 @@ export class UserCreateComponent implements OnInit {
   user:  User = new User('','','','','','');
   router: any;
   usersvc: any;
+  display(): void { console.log(`from user-create.component.ts`, {User});}
 
-  save(): void{ 
+  save(): void { 
     this.usersvc.create(this.user)
-      .subscribe(
-          resp => {// success
-                  console.log(resp);
-                  this.router.navigateByUrl('/user/list');
+      
+      .subscribe(        
+        resp => {// success
+                  console.log(resp);                  
+                  this.router.navigateByUrl('/user/list');                
                 },
                 err => {//error
+                  console.log(`well... this is not good`);
                     console.error(err);
                 }
                );            
