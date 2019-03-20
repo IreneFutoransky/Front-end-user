@@ -1,0 +1,40 @@
+<app-menu></app-menu>
+  <div>
+    <div class="heading">
+      <span class = "pagetitle">Product List</span>
+      <span class = "create"> | <a routerLink="/product/create">Create</a></span>
+      <span class = "search"> | <input [(ngModel)] = "searchCriteria" type="text"></span>
+    </div>
+  <table class="table  table-bordered table-striped">
+    <thead>
+    <tr class="column_titles">
+      <td>Vendor Name</td>
+      <td>Part Number</td>       
+      <td>Product Name</td>
+      <td>Price</td>
+      <td>Unit</td>       
+      <td>Active? </td>
+     </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let product of products | search:searchCriteria" class="coldetail">
+          <td>{{product.vendor.name}}</td>
+          <td>{{product.partNumber}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.unit}}</td>       
+                    
+          <td class="bool">{{product.active | booldisp}}</td>
+          
+          <td>
+              <a routerLink="/product/detail/{{product.id}}">Detail | </a>
+              <a routerLink="/product/edit/{{product.id}}">Edit</a>
+          </td>     
+         
+        </tr>
+    </tbody>
+  
+  </table>
+  
+  </div>
+  

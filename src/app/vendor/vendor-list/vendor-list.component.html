@@ -10,6 +10,7 @@
   <thead>
     <tr>     
       <td>Code</td>
+      <td>Vendor Name</td>
       <td>Address</td>
       <td>City</td>
       <td>Zip</td>
@@ -22,8 +23,10 @@
     <tbody>
       <tr *ngFor = "let vendor of vendors">         
       <td>{{vendor.code}}</td>
+      <td>{{vendor.name}}</td>
       <td>{{vendor.address}}</td>
-      <td>{{vendor.city}}</td>       
+      <td>{{vendor.city}}</td>  
+      <td>{{vendor.state}}</td>   
       <td>{{vendor.zip}}</td>
       <td>{{vendor.phone}}</td>
       <td>{{vendor.email}}</td>
