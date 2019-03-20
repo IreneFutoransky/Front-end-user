@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 import { User } from '../user.class';
 import { UserService } from '../user.service';
+import { LoginComponent } from '../login/login.component';
+
 
 @Component({
   selector: 'app-user-create',
@@ -11,9 +13,8 @@ import { UserService } from '../user.service';
 export class UserCreateComponent implements OnInit {
 
   user:  User = new User('','','','','','');
-  router: any;
-  usersvc: any;
-  display(): void { console.log(`from user-create.component.ts`, {User});}
+ 
+  
 
   save(): void { 
     this.usersvc.create(this.user)
@@ -31,7 +32,9 @@ export class UserCreateComponent implements OnInit {
           }
       
 
-      constructor() { }
+      constructor(private usersvc: UserService,
+         private router:Router,
+         private login: LoginComponent) { }
 
       ngOnInit() {
       }

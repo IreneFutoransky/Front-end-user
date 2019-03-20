@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import { UserService} from  '../user.service'
+import {ActivatedRoute, Router} from '@angular/router';
+import { UserService} from  '../user.service';
 import { User } from '../user.class';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-user-detail',
@@ -12,11 +13,27 @@ export class UserDetailComponent implements OnInit {
 
   user: User;
 
-  constructor(private uservc: UserService, private route: ActivatedRoute) { }
+  delete(): void {
+    this.usersvc.remove(this.user)
+    .subscribe(
+      resp => {
+        console.log("user delete success", resp);
+        this.router.navigateByUrl("/user/list");
+      },
+      err => {
+        console.error("user delete failed", err);
+      }
+    );
+  }
+
+  constructor(private usersvc: UserService,
+     private route: ActivatedRoute,
+     private router: Router,
+     private login: LoginComponent) { }
 
   ngOnInit() {
     let id = this.route.snapshot.params.id;
-    this.uservc.get(id)
+    this.usersvc.get(id)
     .subscribe(resp => {
       console.log(resp),
       this.user = resp;

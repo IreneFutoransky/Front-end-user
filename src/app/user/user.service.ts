@@ -11,6 +11,11 @@ const url = "http://localhost:50402/api";
 })
 export class UserService {
 
+  login(username: string, password: string): Observable<User>
+{
+  return this.http.get(`${url}/users/auth/${username}/${password}`) as Observable<User>;
+
+}
   list(): Observable<User[]> {
     return this.http.get(`${url}/users`) as Observable<User[]>;
   }
@@ -19,8 +24,8 @@ export class UserService {
     return this.http.get(`${url}/users/${id}`) as Observable<User>;
   }
 
-  create(user: User): Observable<User>{
-    return this.http.post(`${url}/users`, user) as Observable<User>;
+  create(user: User): Observable<any>{
+    return this.http.post(`${url}/users`, user) as Observable<any>;
   }
 
   change(user: User): Observable<any>{

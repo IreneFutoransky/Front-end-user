@@ -1,7 +1,9 @@
+<app-menu></app-menu>
 <div>
   <div class="heading">
     <span class = "pagetitle">User List</span>
     <span class = "create"> | <a routerLink="/user/create">Create</a></span>
+    <span class = "search"> | <input [(ngModel)] = "searchCriteria" type="text"></span>
   </div>
 <table class="table  table-bordered table-striped">
   <thead>
@@ -16,13 +18,13 @@
    </tr>
   </thead>
   <tbody>
-      <tr *ngFor = "let user of users">
+      <tr *ngFor = "let user of users | search:searchCriteria" class="coldetail">
         <td>{{user.username}}</td>
         <td>{{user.firstname}} {{user.lastname}}</td>
         <td>{{user.email}}</td>
         <td>{{user.phone}}</td>
-        <td>{{user.isReviewer?"Yes" : "No"}}</td>
-        <td>{{user.isAdmin?"Yes" : "No"}}</td>  
+        <td class="bool">{{user.isReviewer | booldisp}}</td>
+        <td class="bool">{{user.isAdmin | booldisp}}</td>  
         <td>
             <a routerLink="/user/detail/{{user.id}}">Detail | </a>
             <a routerLink="/user/edit/{{user.id}}">Edit</a>

@@ -1,3 +1,62 @@
-<p>
-  user-edit works!
-</p>
+<app-menu></app-menu>
+<div>
+    <div * ngIf="user" class="heading">
+      <span class = "pagetitle"> Create New User | </span>
+      <span class = "list"><a routerLink="/user/list">User List</a></span>
+       
+    </div>
+  </div>
+  
+  <button (click)="save()">Save Changes</button>   
+  
+      
+  <table *ngIf="user" class="table  table-bordered table-striped">     
+    
+              <tbody>
+                                        
+                     <tr>     
+                        <th scope="col">Username </th>      
+                                  
+                        <input type="text" [(ngModel)]="user.username">                                                    
+                     </tr>
+                     <tr>
+                         <th scope="col">First Name: </th>
+                         <input type="text" [(ngModel)]="user.firstname">                   
+                     </tr>
+                     <tr>
+                         <th scope="col">Last Name: </th>
+                         <input type="text" [(ngModel)] ="user.lastname">                          
+                     </tr>
+                     <tr>
+                             <th scope="col">Phone:</th>
+                             <input type="text" [(ngModel)] ="user.phone">                      
+                      </tr>
+                      <tr>
+                             <th scope="col">Email: </th>
+                             <input type="text" [(ngModel)]="user.email">                          
+                      </tr>
+                      <tr>
+                             <th scope="col">Reviewer:</th>
+                             <input type="checkbox" [(ngModel)]="user.isReviewer">    
+                      <tr>
+                             <th scope="col">Admin: </th>
+                             <input type="checkbox" [(ngModel)]="user.isAdmin">                  
+                      </tr>
+                      <tr>
+                               <th scope="col">Active: </th>
+                               <input type="checkbox" [(ngModel)]="user.active">                  
+                        </tr>
+                      <tr>
+                          <th scope="col">Password: </th>
+                          <input type="password" [(ngModel)]="user.password">                  
+                   </tr>
+                 </tbody>
+          
+          </table>  
+  
+  
+  
+  
+  
+    
+    

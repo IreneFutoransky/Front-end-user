@@ -1,4 +1,5 @@
-<div>
+<app-menu></app-menu>
+<div class='loginform'>
   <div class="heading">
     <span class = "pagetitle"> Create New User | </span>
     <span class = "list"><a routerLink="/user/list">User List</a></span>
@@ -7,53 +8,51 @@
 </div>
 
 <button (click)="save()">Add User</button>
-<button (click)="display()"> test </button>
+ 
 
     
 <table class="table  table-bordered table-striped">      
               
     <tbody>
-              <tr>     
-                            <th scope="col">Id </th>                
-                            <input type="text" ng-model="user.Id">
-                                                                  
-                         </tr>
-
+          <!-- <tr>     
+              <th scope="col">Id </th>                
+               <input type="number" [(ngModel)]="user.id">                                                    
+           </tr>
+           -->
            <tr>     
               <th scope="col">Username </th>                
-              <input type="text" ng-model="user.Username">
-                                                    
+              <input type="text" [(ngModel)]="user.username">                                                    
            </tr>
            <tr>
                <th scope="col">First Name: </th>
-               <input type="text" ng-model="user.Firstname">                   
+               <input type="text" [(ngModel)]="user.firstname">                   
            </tr>
            <tr>
                <th scope="col">Last Name: </th>
-               <input type="text" ng-model="user.Lastname">                          
+               <input type="text" [(ngModel)] ="user.lastname">                          
            </tr>
            <tr>
                    <th scope="col">Phone:</th>
-                   <input type="text" ng-model="user.Phone">                      
+                   <input type="text" [(ngModel)] ="user.phone">                      
             </tr>
             <tr>
                    <th scope="col">Email: </th>
-                   <input type="text" ng-model="user.Email">                          
+                   <input type="text" [(ngModel)]="user.email">                          
             </tr>
             <tr>
                    <th scope="col">Reviewer:</th>
-                   <input type="checkbox" ng-model="user.isReviewer">    
+                   <input type="checkbox" [(ngModel)]="user.isReviewer">    
             <tr>
                    <th scope="col">Admin: </th>
-                   <input type="checkbox" ng-model="user.isAdmin">                  
+                   <input type="checkbox" [(ngModel)]="user.isAdmin">                  
             </tr>
             <tr>
                      <th scope="col">Active: </th>
-                     <input type="checkbox" ng-model="user.Active">                  
+                     <input type="checkbox" [(ngModel)]="user.active">                  
               </tr>
             <tr>
                 <th scope="col">Password: </th>
-                <input type="password" ng-model="user.Password">                  
+                <input type="password" [(ngModel)]="user.password">                  
          </tr>
        </tbody>
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../user.service';
 import {User} from '../user.class';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-user-list',
@@ -10,8 +11,10 @@ import {User} from '../user.class';
 export class UserListComponent implements OnInit {
 
   users: User[];
+  searchCriteria: string = "";
 
-  constructor(private usersvc: UserService) { }
+  constructor(private usersvc: UserService,
+    private login: LoginComponent) { }
 
   ngOnInit() {
 

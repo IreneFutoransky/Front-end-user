@@ -1,9 +1,9 @@
+<app-menu></app-menu>
 <div>
     <div class="heading">
             
            
-      <span class = "pagetitle"> User Detail | </span>
-      <span class = "nextuser"><a routerLink="/user/detail/">Next User |</a></span>
+      <span class = "pagetitle"> User Detail | </span>     
       <span class = "list"><a routerLink="/user/list">User List</a></span>
       <span class = "create"><a routerLink="/user/create"> | Create User</a></span>
     </div>
@@ -15,20 +15,21 @@
      <table class="table  table-bordered table-striped">            
             
              <tbody>
-                    <tr>                     
-                        <th scope="col">Username:</th>
-                         <th scope="col">{{user.username}}</th>                                        
+                     <tr>                     
+                            <th scope="col">Username:</th>
+                            <th scope="col">{{user.username}}</th>  
+                                                                         
                      </tr>
-                    
-                    <tr>
-                        <th scope="col">Firstname: </th>
-                         <th scope="col">{{user.firstname}}</th>                      
-                    </tr>
-                    <tr>
-                        <th scope="col">Last Name: </th>
-                        <th scope="col">{{user.lastname}}</th>                      
-                    </tr>
-                    <tr>
+                                
+                      <tr>
+                            <th scope="col">Firstname: </th>
+                            <th scope="col">{{user.firstname}}</th>                      
+                     </tr>
+                     <tr>
+                            <th scope="col">Last Name: </th>
+                            <th scope="col">{{user.lastname}}</th>                      
+                     </tr>
+                      <tr>
                             <th scope="col">Phone:</th>
                             <th scope="col">{{user.phone}}</th>                      
                      </tr>
@@ -36,6 +37,7 @@
                             <th scope="col">Email: </th>
                             <th scope="col">{{user.email}}</th>                      
                      </tr>
+                     
                      <tr>
                             <th scope="col">Reviewer:</th>
                             <th scope="col">{{user.isReviewer?"Yes" : "No"}}</th>                         
@@ -47,6 +49,8 @@
                 </tbody>
     
  </table>  
+ <button (click)="delete()" class="btn btn-danger">Delete</button>
+ <a routerLink="/user/list" > | Return to list></a>
   
 </div>
  
