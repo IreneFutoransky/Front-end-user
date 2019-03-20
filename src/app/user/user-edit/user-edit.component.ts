@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {UserService} from '../user.service';
 import { User} from '../user.class';
 import { ActivatedRoute, Router} from '@angular/router';
-import { LoginComponent } from '../login/login.component';
 
 
 @Component({
@@ -14,6 +13,7 @@ export class UserEditComponent implements OnInit {
   user: User;
 
 save(): void{
+  console.log("User to change: ", this.user);
   this.usersvc.change(this.user)
   .subscribe(
     resp => {
@@ -30,9 +30,8 @@ save(): void{
   constructor(
     private usersvc: UserService,
     private route: ActivatedRoute,
-    private router: Router,
-    private login: LoginComponent
-  ) { }
+    private router: Router
+  ) { } 
 
   
 

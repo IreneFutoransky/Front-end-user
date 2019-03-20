@@ -1,29 +1,29 @@
 
 export class User {
-    Id:       number;
-    Username: string;
-    Password: string;
-    Firstname: string;
-    Lastname: string;
-    Phone: string;
-    Email: string;
+    id:       number;
+    username: string;
+    password: string;
+    firstname: string;
+    lastname: string;
+    phone: string;
+    email: string;
     isReviewer: boolean;
     isAdmin: boolean;
-    Active: boolean;
+    active: boolean;
     
-        constructor(Username: string, Password: string, Firstname: string, Lastname: string, 
-            Phone: string, Email: string, isReviewer: boolean = false, isAdmin: boolean = false, 
+        constructor(username: string, password: string, firstname: string, lastname: string, 
+            phone: string, email: string, isReviewer: boolean = false, isAdmin: boolean = false, 
             Active: boolean=false) {
-        this.Id = 0;
-        this.Username = Username;
-        this.Password = Password;
-        this.Firstname = Firstname;
-        this.Lastname = Lastname;
-        this.Phone = Phone;
-        this.Email = Email;
+        this.id = 0;
+        this.username = username;
+        this.password = password;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.phone = phone;
+        this.email = email;
         this.isReviewer = isReviewer;
         this.isAdmin= isAdmin;
-        this.Active = Active;
+        this.active = Active;
 
     }    
 }  

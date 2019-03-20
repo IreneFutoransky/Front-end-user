@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import { UserService} from  '../user.service';
 import { User } from '../user.class';
-import { LoginComponent } from '../login/login.component';
+//import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-user-detail',
@@ -26,10 +26,11 @@ export class UserDetailComponent implements OnInit {
     );
   }
 
-  constructor(private usersvc: UserService,
+  constructor(
+    private usersvc: UserService,
      private route: ActivatedRoute,
-     private router: Router,
-     private login: LoginComponent) { }
+     private router: Router
+  ) { }
 
   ngOnInit() {
     let id = this.route.snapshot.params.id;

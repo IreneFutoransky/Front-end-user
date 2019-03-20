@@ -1,0 +1,54 @@
+<app-menu></app-menu>
+<div>
+    <div class="heading">            
+           
+      <span class = "pagetitle"> Vendor Detail | </span>     
+      <span class = "list"><a routerLink="/vendor/list">Vendor List</a></span>
+      <span class = "create"><a routerLink="/vendor/create"> | Create Vendor</a></span>
+    </div>
+     
+    <div class = "container">        
+                   
+     <table *ngIf="vendor" class="table  table-bordered table-striped">            
+            
+             <tbody>
+                     <tr>                     
+                            <th scope="col">Vendor Code:</th>
+                            <th scope="col">{{vendor.code}}</th>  
+                                                                         
+                     </tr>
+                                
+                      <tr>
+                            <th scope="col">Address: </th>
+                            <th scope="col">{{vendor.address}}</th>                      
+                     </tr>
+                     <tr>
+                            <th scope="col">City: </th>
+                            <th scope="col">{{vendor.city}}</th>                      
+                     </tr>
+                      <tr>
+                            <th scope="col">Zip:</th>
+                            <th scope="col">{{vendor.zip}}</th>                      
+                     </tr>
+                     <tr>
+                            <th scope="col">phone </th>
+                            <th scope="col">{{vendor.phone}}</th>                      
+                     </tr>
+                     
+                     <tr>
+                            <th scope="col">Preferred?:</th>
+                            <th scope="col">{{vendor.isPreferred?"Yes" : "No"}}</th>                         
+                     </tr>
+                     <tr>
+                            <th scope="col">Active?: </th>
+                            <th scope="col">{{vendor.active?"Yes" : "No"}}</th>                      
+                     </tr>
+                </tbody>
+    
+ </table>  
+ <button (click)="delete()" class="btn btn-danger">Delete</button>
+ <a routerLink="/vendor/list" > | Return to list></a>
+  
+</div>
+ 
+  </div>

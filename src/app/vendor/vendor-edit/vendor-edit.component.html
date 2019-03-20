@@ -1,0 +1,49 @@
+<app-menu></app-menu>
+<div>
+    <div * ngIf="user" class="heading">
+      <span class = "pagetitle"> Create New Vendor </span>
+      <span class = "list"><a routerLink="/vendor/list">Vendor List</a></span>
+       
+    </div>
+  </div>
+  
+  <button (click)="save()">Save Changes</button>   
+  
+      
+  <table *ngIf="vendor" class="table  table-bordered table-striped">     
+    
+              <tbody>
+                                        
+                     <tr>     
+                        <th scope="col">Code </th>      
+                                  
+                        <input type="text" [(ngModel)]="vendor.code">                                                    
+                     </tr>
+                     <tr>
+                         <th scope="col">Address: </th>
+                         <input type="text" [(ngModel)]="vendor.address">                   
+                     </tr>
+                     <tr>
+                         <th scope="col">City: </th>
+                         <input type="text" [(ngModel)] ="vendor.city">                          
+                     </tr>
+                     <tr>
+                             <th scope="col">Zip Code:</th>
+                             <input type="text" [(ngModel)] ="vendor.Zip">                      
+                      </tr>
+                      <tr>
+                             <th scope="col">E-mail address: </th>
+                             <input type="text" [(ngModel)]="vendor.email">                          
+                      </tr>
+                      <tr>
+                             <th scope="col">Preferred? :</th>
+                             <input type="checkbox" [(ngModel)]="vendor.isPreferred">    
+                     
+                      <tr>
+                               <th scope="col">Active: </th>
+                               <input type="checkbox" [(ngModel)]="vendor.active">                  
+                        </tr>
+                      
+                 </tbody>
+          
+          </table>  

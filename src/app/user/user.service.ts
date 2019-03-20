@@ -29,11 +29,11 @@ export class UserService {
   }
 
   change(user: User): Observable<any>{
-    return this.http.put(`${url}/users/${user.Id}`, user) as Observable<any>;
+    return this.http.put(`${url}/users/${user.id}`, user) as Observable<any>;
   }
 
   remove(user: User): Observable<any>{
-    return this.http.delete(`${url}/users/${user.Id}`) as Observable<any>;
+    return this.http.delete(`${url}/users/${user.id}`) as Observable<any>;
   }
 
 

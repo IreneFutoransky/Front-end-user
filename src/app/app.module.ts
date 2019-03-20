@@ -16,6 +16,10 @@ import { MenuComponent } from './system/menu/menu.component';
 import { MenuItemComponent } from './system/menu-item/menu-item.component';
 import { BooldispPipe } from './system/booldisp.pipe';
 import { SearchPipe } from './system/search.pipe';
+import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
+import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
+import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
+import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,7 @@ import { SearchPipe } from './system/search.pipe';
     AboutComponent,
     LoginComponent,
     MenuComponent,    
-    MenuItemComponent, BooldispPipe, SearchPipe
+    MenuItemComponent, BooldispPipe, SearchPipe, VendorListComponent, VendorDetailComponent, VendorCreateComponent, VendorEditComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,14 @@ import { UserCreateComponent } from './user/user-create/user-create.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import {LoginComponent} from './user/login/login.component';
 
+import { VendorListComponent} from './vendor/vendor-list/vendor-list.component';
+import { VendorDetailComponent} from './vendor/vendor-detail/vendor-detail.component';
+import { VendorCreateComponent} from './vendor/vendor-create/vendor-create.component';
+import { VendorEditComponent} from './vendor/vendor-edit/vendor-edit.component';
+
+
+
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'}, /*first route always*/
   { path: 'login', component: LoginComponent},
@@ -19,6 +27,14 @@ const routes: Routes = [
   { path: 'user/edit/:id', component: UserEditComponent},
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
+
+
+  { path: 'vendor/list', component: VendorListComponent},
+  { path: 'vendor/detail/:id', component: VendorDetailComponent},
+  { path: 'vendor/create', component: VendorCreateComponent},
+  { path: 'vendor/edit/:id', component: VendorEditComponent},
+
+
    
   { path: '**', component: HomeComponent}              /*last route always*/
 

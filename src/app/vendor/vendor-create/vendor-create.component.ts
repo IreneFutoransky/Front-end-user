@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
-import { User } from '../user.class';
-import { UserService } from '../user.service';
+import { Vendor } from '../vendor.class';
+import { VendorService } from '../vendor.service';
 
 
 
 @Component({
-  selector: 'app-user-create',
-  templateUrl: './user-create.component.html',
-  styleUrls: ['./user-create.component.css']
+  selector: 'app-vendor-create',
+  templateUrl: './vendor-create.component.html',
+  styleUrls: ['./vendor-create.component.css']
 })
-export class UserCreateComponent implements OnInit {
+export class VendorCreateComponent implements OnInit {
 
-  user:  User = new User('','','','','','');
+  vendor:  Vendor = new Vendor('','','','','','');
  
   
 
   save(): void { 
-    this.usersvc.create(this.user)
+    this.vendorsvc.create(this.vendor)
       
       .subscribe(        
         resp => {// success
                   console.log(resp);                  
-                  this.router.navigateByUrl('/user/list');                
+                  this.router.navigateByUrl('/vendor/list');                
                 },
                 err => {//error
                   console.log(`well... this is not good`);
@@ -32,13 +32,10 @@ export class UserCreateComponent implements OnInit {
           }
       
 
-      constructor(private usersvc: UserService,
+      constructor(private vendorsvc: VendorService,
          private router:Router
          ) { }
 
       ngOnInit() {
       }
   }
- 
-
-

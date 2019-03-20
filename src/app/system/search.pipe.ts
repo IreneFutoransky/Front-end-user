@@ -11,27 +11,27 @@ export class SearchPipe implements PipeTransform {
       return users;
     let arrOut: User[] = [];
     for(let user of users){
-      if(user.Username.toLowerCase().includes(criteria.toLowerCase())){
+      if(user.username.toLowerCase().includes(criteria.toLowerCase())){
 
         arrOut.push(user);
         continue;
       }
-      if(user.Firstname.toLowerCase().includes(criteria.toLowerCase())){
+      if(user.firstname.toLowerCase().includes(criteria.toLowerCase())){
 
         arrOut.push(user);
         continue;
       }
-      if(user.Lastname.toLowerCase().includes(criteria.toLowerCase())){
+      if(user.lastname.toLowerCase().includes(criteria.toLowerCase())){
 
         arrOut.push(user);
         continue;
       }
-      if(user.Phone.toLowerCase().includes(criteria.toLowerCase())){
+      if(user.phone.toLowerCase().includes(criteria.toLowerCase())){
 
         arrOut.push(user);
         continue;
       }
-      if(user.Email.toLowerCase().includes(criteria.toLowerCase())){
+      if(user.email.toLowerCase().includes(criteria.toLowerCase())){
 
         arrOut.push(user);
         continue;
