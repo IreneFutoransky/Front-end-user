@@ -8,17 +8,17 @@
 <table class="table  table-bordered table-striped">
   <thead>
   <tr class="column_titles">
-    <td>Username</td>
-    <td>First and Last Name</td>
-    <td>Email</td>
-    <td>Phone</td>
-    <td>Reviewer</td>
-    <td>Admin</td>
+    <td><a (click)="sortBy('username')">Username</a></td>
+    <td><a (click)="sortBy('lastname')">Name</a></td>
+    <td><a (click)="sortBy('email')">Email</a></td>
+    <td><a (click)="sortBy('phone')">Phone Number</a></td>
+    <td class="bool">Reviewer?</td>
+    <td class="bool">Admin?</td>
     <td>Actions</td>
    </tr>
   </thead>
   <tbody>
-      <tr *ngFor = "let user of users | search:searchCriteria" class="coldetail">
+      <tr *ngFor = "let user of users | search:searchCriteria | sort:sortCriteria:sortOrder " class="coldetail">
         <td>{{user.username}}</td>
         <td>{{user.firstname}} {{user.lastname}}</td>
         <td>{{user.email}}</td>

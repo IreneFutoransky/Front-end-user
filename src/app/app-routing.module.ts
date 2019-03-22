@@ -20,6 +20,14 @@ import { ProductDetailComponent} from './product/product-detail/product-detail.c
 import { ProductCreateComponent} from './product/product-create/product-create.component';
 import { ProductEditComponent} from './product/product-edit/product-edit.component';
 
+import { RequestListComponent} from './request/request-list/request-list.component';
+import { RequestDetailComponent} from './request/request-detail/request-detail.component';
+import { RequestCreateComponent} from './request/request-create/request-create.component';
+
+
+
+import { RequestEditComponent} from './request/request-edit/request-edit.component';
+
 
 
 
@@ -43,6 +51,12 @@ const routes: Routes = [
   { path: 'product/detail/:id', component: ProductDetailComponent},
   { path: 'product/create', component: ProductCreateComponent},
   { path: 'product/edit/:id', component: ProductEditComponent},
+
+  { path: 'request/list', component: RequestListComponent},
+  { path: 'request/detail/:id', component: RequestDetailComponent},
+  { path: 'request/create/', component: RequestCreateComponent},
+  { path: 'request/edit:id', component: RequestEditComponent},
+
 
 
    

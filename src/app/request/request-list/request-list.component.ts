@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
-import { User } from '../user.class';
+import { RequestService } from '../request.service';
+import { Request } from '../request.class';
 
 
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.css']
+  selector: 'app-request-list',
+  templateUrl: './request-list.component.html',
+  styleUrls: ['./request-list.component.css']
 })
-export class UserListComponent implements OnInit {
+export class RequestListComponent implements OnInit {
 
-  users: User[];
+  requests: Request [];
   searchCriteria: string = "";
-  sortCriteria: string = "username";
+  sortCriteria: string = "requestname";
   sortOrder: string = "asc";
 
   sortBy(column: string): void {
@@ -23,14 +23,15 @@ export class UserListComponent implements OnInit {
       this.sortOrder = 'asc';
     }
   }
-  constructor(private usersvc: UserService
+  constructor(private requestsvc: RequestService
   ) { }
   ngOnInit() {
-    this.usersvc.list()
+    this.requestsvc.list()
       .subscribe(resp => {
         console.log(resp);
-        this.users = resp;
+        this.requests = resp;
       });
   }
 
 }
+

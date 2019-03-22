@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { User } from '../user/user.class'
+ 
 
 @Pipe({
   name: 'search'
@@ -41,6 +42,6 @@ export class SearchPipe implements PipeTransform {
       
     
     return arrOut;
-  }
-  }
+  }}
 
+  

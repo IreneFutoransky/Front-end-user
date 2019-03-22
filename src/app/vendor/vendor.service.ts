@@ -28,6 +28,9 @@ export class VendorService {
     return this.http.post(`${url}/vendors`, vendor) as Observable<any>;
   }
 
+  
+
+
   remove(vendor: Vendor): Observable<any>{
     return this.http.delete(`${url}/vendors/${vendor.id}`) as Observable<any>;
   }

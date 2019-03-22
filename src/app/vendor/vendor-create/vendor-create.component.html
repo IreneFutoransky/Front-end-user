@@ -9,48 +9,40 @@
 
 <button (click)="save()">Add Vendor</button>
  
-
+<table class="table  table-bordered table-striped">     
     
-<table class="table  table-bordered table-striped">      
-              
-    <tbody>
-          <!-- <tr>     
-              <th scope="col">Id </th>                
-               <input type="number" [(ngModel)]="vendor.id">                                                    
-           </tr>
-           -->
-           <tr>     
-              <th scope="col">Vendor Code </th>                
-              <input type="text" [(ngModel)]="vendor.code">                                                    
-           </tr>
-           <tr>
-               <th scope="col">Address: </th>
-               <input type="text" [(ngModel)]="vendor.address">                   
-           </tr>
-           <tr>
-               <th scope="col">City: </th>
-               <input type="text" [(ngModel)] ="vendor.city">                          
-           </tr>
-           <tr>
-                   <th scope="col">Zip:</th>
-                   <input type="text" [(ngModel)] ="vendor.zip">                      
-            </tr>
-            <tr>
-                   <th scope="col">Phone: </th>
-                   <input type="text" [(ngModel)]="vendor.phone">                          
-            </tr>
-            <tr>
-                   <th scope="col">E-mail:</th>
-                   <input type="text" [(ngModel)]="vendor.email">    
-            <tr>
-                   <th scope="col">Preferred?: </th>
-                   <input type="checkbox" [(ngModel)]="vendor.isPreferred">                  
-            </tr>
-            <tr>
-                <th scope="col">Active?: </th>
-                 <input type="checkbox" [(ngModel)]="vendor.active">                  
+<tbody>
+                                        
+              <tr>     
+                 <th scope="col">Code </th>      
+                           
+                 <input type="text" [(ngModel)]="vendor.code">                                                    
               </tr>
-            
-       </tbody>
-
-</table>  
+              <tr>
+                  <th scope="col">Address: </th>
+                  <input type="text" [(ngModel)]="vendor.address">                   
+              </tr>
+              <tr>
+                  <th scope="col">City: </th>
+                  <input type="text" [(ngModel)] ="vendor.city">                          
+              </tr>
+              <tr>
+                      <th scope="col">Zip Code:</th>
+                      <input type="text" [(ngModel)] ="vendor.Zip">                      
+               </tr>
+               <tr>
+                      <th scope="col">E-mail address: </th>
+                      <input type="text" [(ngModel)]="vendor.email">                          
+               </tr>
+               <tr>
+                      <th scope="col">Preferred? :</th>
+                      <input type="checkbox" [(ngModel)]="vendor.isPreferred">    
+              
+               <tr>
+                        <th scope="col">Active: </th>
+                        <input type="checkbox" [(ngModel)]="vendor.active">                  
+                 </tr>
+               
+          </tbody>
+   
+   </table>  

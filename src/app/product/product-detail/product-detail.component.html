@@ -1,3 +1,45 @@
-<p>
-  product-detail works!
-</p>
+<app-menu></app-menu>
+<div>
+    <div class="heading">
+            
+           
+      <span class = "pagetitle"> Product Detail | </span>     
+      <span class = "list"><a routerLink="/product/list">Product List</a></span>
+      <span class = "create"><a routerLink="/product/create"> | Create Product</a></span>
+    </div>
+     
+    <div class = "container">   
+       
+            
+       
+     <table *ngIf="product" class="table  table-bordered table-striped">            
+            
+             <tbody>
+                     <tr>                     
+                            <th scope="col">Product Name:</th>
+                            <th scope="col">{{product.name}}</th>  
+                                                                         
+                     </tr>
+                                
+                      <tr>
+                            <th scope="col">Part Number: </th>
+                            <th scope="col">{{product.partNumber}}</th>                      
+                     </tr>
+                     <tr>
+                            <th scope="col">Unit: </th>
+                            <th scope="col">{{product.unit}}</th>                      
+                     </tr>                    
+                                         
+                     <tr>
+                            <th scope="col">Active? : </th>
+                            <th scope="col">{{product.active?"Yes" : "No"}}</th>                      
+                     </tr>
+                </tbody>
+    
+ </table>  
+ <button (click)="delete()" class="btn btn-danger">Delete</button>
+ <a routerLink="/product/list" > | Return to list></a>
+  
+</div>
+ 
+  </div>

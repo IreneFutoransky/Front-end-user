@@ -12,7 +12,7 @@ import { VendorService } from '../vendor.service';
 })
 export class VendorCreateComponent implements OnInit {
 
-  vendor:  Vendor = new Vendor('','','','','','');
+  vendor:  Vendor = new Vendor('','','','','','','','');
  
   
 

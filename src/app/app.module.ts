@@ -16,6 +16,8 @@ import { MenuComponent } from './system/menu/menu.component';
 import { MenuItemComponent } from './system/menu-item/menu-item.component';
 import { BooldispPipe } from './system/booldisp.pipe';
 import { SearchPipe } from './system/search.pipe';
+
+
 import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
 import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
 import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
@@ -24,6 +26,13 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
+import { SortPipe } from "./system/sort.pipe";
+import { SearchPipeProductPipe } from './system/search-pipe-product.pipe';
+import { RequestListComponent } from './request/request-list/request-list.component';
+import { RequestDetailComponent } from './request/request-detail/request-detail.component';
+import { RequestRequestEditComponent } from './request-request-edit/request-request-edit.component';
+import { RequestCreateComponent } from './request/request-create/request-create.component';
+import { RequestEditComponent } from './request/request-edit/request-edit.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +45,14 @@ import { ProductEditComponent } from './product/product-edit/product-edit.compon
     AboutComponent,
     LoginComponent,
     MenuComponent,    
-    MenuItemComponent, BooldispPipe, SearchPipe, VendorListComponent, VendorDetailComponent, VendorCreateComponent, VendorEditComponent, ProductListComponent, ProductDetailComponent, ProductCreateComponent, ProductEditComponent
+    MenuItemComponent, BooldispPipe, SearchPipe, VendorListComponent, VendorDetailComponent, VendorCreateComponent, VendorEditComponent, ProductListComponent, ProductDetailComponent, ProductCreateComponent, ProductEditComponent,
+    SortPipe,
+    SearchPipeProductPipe,
+    RequestListComponent,
+    RequestDetailComponent,
+    RequestRequestEditComponent,
+    RequestCreateComponent,
+    RequestEditComponent
   ],
   imports: [
     BrowserModule,

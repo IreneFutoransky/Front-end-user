@@ -1,3 +1,67 @@
-<p>
-  product-create works!
-</p>
+<app-menu></app-menu>
+<div class='loginform'>
+  <div class="heading">
+    <span class = "pagetitle"> Create New Product | </span>
+    <span class = "list"><a routerLink="/product/list">Product List</a></span>
+     
+  </div>
+</div>
+
+<button (click)="save()">Add Product</button>
+ 
+
+    
+<table *ngIf="product" class="table  table-bordered table-striped">      
+              
+    <tbody>
+          <!-- <tr>     
+              <th scope="col">Id </th>                
+               <input type="number" [(ngModel)]="product.id">                                                    
+           </tr>
+           -->
+           <tr>                   
+            <th scope="col">Vendor</th>   
+            <td>
+              <select [(ngModel)]="product.vendorId">
+                <option *ngFor="let vendor of vendors"
+                  [ngValue]="vendor.id">{{vendor.name}}
+                </option>     
+              </select>
+            </td>
+          </tr>
+           <tr>     
+              <th scope="col">Product Name </th>                
+              <input type="text" [(ngModel)]="product.name">                                                    
+           </tr>
+           <tr>
+              <th scope="col">Part Number </th>
+              <input type="string" [(ngModel)]="product.partNumber">                   
+          </tr>
+           <tr>
+               <th scope="col">Price </th>
+               <input type="number" [(ngModel)]="product.price">                   
+           </tr>
+           <tr>
+              <th scope="col">Unit </th>
+              <input type="number" [(ngModel)]="product.unit">                   
+          </tr>
+           <tr>
+               <th scope="col">Active?  </th>
+               <input type="checkbox" [(ngModel)]="product.active">                     
+           </tr>
+           <tr>
+              <th scope="col">Photo Path  </th>
+              <input type="string" [(ngModel)]="product.photoPath">                     
+          </tr>
+
+           
+       </tbody>
+
+</table>  
+
+
+
+
+
+  
+  
