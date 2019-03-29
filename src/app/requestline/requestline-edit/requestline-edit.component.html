@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+<div>
+    <div * ngIf="requestline" class="heading">
+      <span class = "pagetitle"> Request Line Edit </span>
+      <span class = "list"><a routerLink="/requestline/edit">Request Line List</a></span>
+       
+    </div>
+  </div>
+  
+  <button (click)="save()">Save Changes</button>   
+  
+      
+  <table *ngIf="requestline" class="table  table-bordered table-striped">     
+    
+              <tbody>
+                <td>
+                  <select [(ngModel)]="requestline.productId">
+                    <option *ngFor="let product of products"
+                      [ngValue]="product.id">{{product.name}}
+                    </option>     
+                  </select>
+              
+                  <td>                
+                     <tr>     
+                        <th scope="col">Quantity </th>      
+                                  
+                        <input type="text" [(ngModel)]="requestline.quantity">                                                    
+                     </tr>
+                     
+                      
+                 </tbody>
+          
+    </table>  

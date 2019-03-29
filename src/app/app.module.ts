@@ -28,11 +28,28 @@ import { ProductCreateComponent } from './product/product-create/product-create.
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import { SortPipe } from "./system/sort.pipe";
 import { SearchPipeProductPipe } from './system/search-pipe-product.pipe';
+
+import { RequestRequestEditComponent } from './request-request-edit/request-request-edit.component';
+
 import { RequestListComponent } from './request/request-list/request-list.component';
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
-import { RequestRequestEditComponent } from './request-request-edit/request-request-edit.component';
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
+
+
+
+
+import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
+import { RequestlineCreateComponent  } from './requestline/requestline-create/requestline-create.component';
+import { RequestlineDisplayComponent } from './requestline/requestline-display/requestline-display.component';
+
+
+import { ReviewComponent } from './reviews/review/review.component';
+
+import { ReviewApprovalComponent } from './reviews/review-approval/review-approval.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -52,7 +69,12 @@ import { RequestEditComponent } from './request/request-edit/request-edit.compon
     RequestDetailComponent,
     RequestRequestEditComponent,
     RequestCreateComponent,
-    RequestEditComponent
+    RequestEditComponent,
+    RequestlineCreateComponent,
+    RequestlineDisplayComponent,
+    RequestlineEditComponent,
+    ReviewComponent,
+    ReviewApprovalComponent
   ],
   imports: [
     BrowserModule,

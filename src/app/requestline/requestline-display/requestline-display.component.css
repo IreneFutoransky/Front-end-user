@@ -1,11 +1,12 @@
 div{background-color:whitesmoke;
-    text-align: center;
+    text-align: left;
     };
   
-    
+ td{
+    font-weight: bold;
+ }   
 
 
 thead{
     font-weight: bold;
 }
-  

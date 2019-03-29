@@ -1,0 +1,50 @@
+<app-menu></app-menu>
+<div class='loginform'>
+  <div class="heading">
+    <span class = "pagetitle"> Create New Request Line | </span>    
+    <span class = "list"><a routerLink="/request/list/">Request</a></span>
+    
+                                      
+  </div>
+</div>
+
+<button (click)="save()">Add Request</button>
+ 
+
+    
+<table *ngIf="requestline" class="table  table-bordered table-striped">      
+  
+  
+ 
+  <th scope="col">Product</th>     
+ 
+  <td>
+    <select [(ngModel)]="requestline.productId">
+      <option *ngFor="let product of products"
+        [ngValue]="product.id">{{product.name}}
+      </option>     
+    </select>
+
+    <td>
+      
+          <tr>
+              <th scope="col">Quantity</th>
+              <input type="number" [(ngModel)]="requestline.quantity">                   
+          </tr>
+           <tr>
+               <th scope="col">Active? </th>
+               <input type="checkbox" [(ngModel)]="requestline.active">                     
+           </tr>
+           
+
+           
+       </tbody>
+
+</table>  
+
+
+
+
+
+  
+  

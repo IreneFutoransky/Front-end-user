@@ -22,14 +22,17 @@ import { ProductEditComponent} from './product/product-edit/product-edit.compone
 
 import { RequestListComponent} from './request/request-list/request-list.component';
 import { RequestDetailComponent} from './request/request-detail/request-detail.component';
+import { RequestEditComponent} from   './request/request-edit/request-edit.component';
 import { RequestCreateComponent} from './request/request-create/request-create.component';
 
 
 
-import { RequestEditComponent} from './request/request-edit/request-edit.component';
+import { RequestlineCreateComponent} from './requestline/requestline-create/requestline-create.component';
+import { RequestlineDisplayComponent } from './requestline/requestline-display/requestline-display.component';
+import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
 
-
-
+import { ReviewComponent} from './reviews/review/review.component'
+import { ReviewApprovalComponent} from './reviews/review-approval/review-approval.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'}, /*first route always*/
@@ -38,6 +41,7 @@ const routes: Routes = [
   { path: 'user/detail/:id', component: UserDetailComponent},
   { path: 'user/create', component: UserCreateComponent},
   { path: 'user/edit/:id', component: UserEditComponent},
+
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
 
@@ -54,11 +58,19 @@ const routes: Routes = [
 
   { path: 'request/list', component: RequestListComponent},
   { path: 'request/detail/:id', component: RequestDetailComponent},
-  { path: 'request/create/', component: RequestCreateComponent},
-  { path: 'request/edit:id', component: RequestEditComponent},
+  { path: 'request/create', component: RequestCreateComponent},
+  { path: 'request/edit/:id', component: RequestEditComponent},
 
 
+  { path: 'requestline/create/:id', component: RequestlineCreateComponent},
+  { path: 'requestline/edit/:id', component: RequestlineEditComponent},
+  { path: 'requestline/display', component: RequestlineDisplayComponent},
+  { path: 'requestline/display/:id', component: RequestlineDisplayComponent},
 
+  { path: 'reviews/review', component: ReviewComponent},
+  { path: 'reviews/review/approval/:id', component: ReviewApprovalComponent},
+
+  
    
   { path: '**', component: HomeComponent}              /*last route always*/
 

@@ -1,0 +1,62 @@
+<app-menu></app-menu>
+
+   <div class="heading">
+
+       <span class = "pagetitle">Review Approval</span>
+       
+       
+   </div>
+
+    <table *ngIf="request" class="table  table-bordered table-striped">
+       <thead>
+           <tr>
+             <td>Description</td>
+             <td>Status</td>
+             <td>Total</td>
+             <td>User</td>
+            
+           </tr>
+         </thead>
+       <tbody>
+               <tr>
+                   <td scope="col">{{request.description}}</td>
+                   <td scope="col">{{request.status}}</td>
+                   <td scope="col">{{request.total}}</td>
+                   <td scope="col">{{request.user.username}}</td>
+               </tr>
+
+       </tbody>
+
+</table>
+
+     <hr>
+    
+
+    <table class="table  table-bordered table-striped">
+
+     <thead>
+         <tr>
+
+
+           <td>Product Name</td>
+           <td>Quantity</td>
+           <td>Price</td>
+           <td>Line Total</td>
+           
+         </tr>
+       </thead>
+
+       <tbody>
+           <tr *ngFor = "let requestline of request.requestLines">
+
+               <td>{{requestline.product.name}}</td>
+               <td>{{requestline.quantity}}</td>
+               <td>{{requestline.product.price}}</td>
+               <td>{{requestline.product.price * requestline.quantity }}</td>
+               
+           </tr>
+       </tbody>
+
+       <button (click)="reject(request)" class="btn btn-danger">Reject</button>       
+       <button (click)="approve(request)" class="btn btn-success">Approve </button>
+   </table>

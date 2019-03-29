@@ -1,3 +1,61 @@
-<p>
-  request-create works!
-</p>
+<app-menu></app-menu>
+<div class='loginform'>
+  <div class="heading">
+    <span class = "pagetitle"> Create New Request | </span>
+    <span class = "list"><a routerLink="/request/list">Request List</a></span>
+                                      
+  </div>
+</div>
+
+<button (click)="save()">Add Request</button>
+ 
+
+    
+<table *ngIf="request" class="table  table-bordered table-striped">      
+              
+   
+    <tr>     
+        <th scope="col" >User Id </th>                
+        <input type="text" [(ngModel)]="request.userId">                                                    
+     </tr>
+           <tr>
+              <th scope="col">Description</th>
+              <input type="text" [(ngModel)]="request.description">                   
+          </tr>
+           <tr>
+               <th scope="col">Justification</th>
+               <input type="text" [(ngModel)]="request.justification">                   
+           </tr>
+           <tr>
+              <th scope="col">Delivery Method</th>
+              <input type="text" [(ngModel)]="request.deliveryMode">                   
+          </tr>
+          <tr>
+              <th scope="col">Review Date</th>
+              <input type="datetime" [(ngModel)]="request.reviewDate">                   
+          </tr>
+          <tr>
+              <th scope="col">Status</th>
+              <input type="string" [(ngModel)]="request.status">                   
+          </tr>
+          <tr>
+              <th scope="col">Total</th>
+              <input type="string" [(ngModel)]="request.total">                   
+          </tr>
+           <tr>
+               <th scope="col">Active?  </th>
+               <input type="checkbox" [(ngModel)]="request.active">                     
+           </tr>
+           
+
+           
+       </tbody>
+
+</table>  
+
+
+
+
+
+  
+  

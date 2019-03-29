@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 import { Request } from '../request.class';
-import { RequestService } from '../request.service';
- 
+import { RequestService } from '../request.service'; 
 
 
 @Component({
-  selector: 'app-request-create',
+  selector: 'app-request-create',  
   templateUrl: './request-create.component.html',
   styleUrls: ['./request-create.component.css']
 })

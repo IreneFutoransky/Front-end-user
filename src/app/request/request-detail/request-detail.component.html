@@ -1,3 +1,53 @@
-<p>
-  request-detail works!
-</p>
+<app-menu></app-menu>
+<div>
+       <div class="heading">
+              <span class = "pagetitle">Request Detail</span>              
+              <span class = "list">  <a routerLink="/request/list" > Return to Request List </a></span>              
+       </div>
+    <div class="heading">                    
+      
+    </div>
+     
+    <div class = "container">        
+                   
+     <table *ngIf="request" class="table  table-bordered table-striped">            
+            
+             <tbody>
+                     <tr>                     
+                            <th scope="col">Description:</th>
+                            <th scope="col">{{request.description}}</th>  
+                                                                         
+                     </tr>
+                                
+                      <tr>
+                            <th scope="col">Justification: </th>
+                            <th scope="col">{{request.justification}}</th>                      
+                     </tr>
+                     <tr>
+                            <th scope="col">Delivery: </th>
+                            <th scope="col">{{request.deliveryMode}}</th>                      
+                     </tr>
+                      <tr>
+                            <th scope="col">Review Date:</th>
+                            <th scope="col"> {{request.reviewDate | date:'medium'}}</th>                      
+                     </tr>
+                     <tr>
+                            <th scope="col">Status </th>
+                            <th scope="col">{{request.status}}</th>                      
+                     </tr>
+                     
+                     
+                     <tr>
+                            <th scope="col">Active?: </th>
+                            <th scope="col">{{request.active?"Yes" : "No"}}</th>                      
+                     </tr>
+                </tbody>
+    
+ </table>  
+ <button (click)="delete()" class="btn btn-danger">Delete</button> 
+ <button (click)="review(request)" class="btn btn-success">Review</button>
+ 
+  
+</div>
+ 
+  </div>
