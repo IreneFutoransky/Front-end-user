@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 import { Request } from '../request.class';
 import { RequestService } from '../request.service'; 
-
+import {User} from '../../user/user.class';
 
 @Component({
   selector: 'app-request-create',  
@@ -10,9 +10,10 @@ import { RequestService } from '../request.service';
   styleUrls: ['./request-create.component.css']
 })
 export class RequestCreateComponent implements OnInit {
-
+ 
+  user: User;
    
-  request:  Request = new Request(0,0,'','','','', 0);
+  request:  Request = new Request(0,'','','','', 0);
   
   route: any;
  

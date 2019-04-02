@@ -10,11 +10,11 @@ export class Request {
     total: number;     
     active: boolean;
     
-        constructor(id: number, userId: number, description: string,
+        constructor(userId: number = 0, description: string = '',
              deliveryMode: string, 
-            reviewDate: string, status: string, total: number = 0, 
+            reviewDate: string, status: string = 'NEW', total: number = 0, 
             Active: boolean=false) {
-        this.id = 0;
+         
         this.userId = userId;
         this.description = description;
         this.deliveryMode = deliveryMode;
